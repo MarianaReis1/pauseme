@@ -1,0 +1,82 @@
+@import './variablesAndMixins';
+@import './secondaryPages';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: $font1;
+    background-image: url(../src/bgEffect.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.topBar{
+    background-color: $primaryColor2;
+    height: fit-content;
+    padding: 10% 12%;
+
+    h4{
+        color: white;
+        display: block;
+        margin: auto;
+    }
+    img{
+        width: 280px;
+        padding: 10% 0;
+    }
+    .line2{
+        float: right;
+        margin-top: -25px;
+    
+    }
+}
+
+.mainContent {
+    color: $primaryColor3;
+    font-weight: 400;
+    font-size: 1.3rem;
+    padding: 10% 12%;
+    text-align: center;
+}
+
+.mainGrid{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+    padding: 0 12%;
+    justify-content: space-evenly;   
+
+}
+
+.contentBox1,
+.contentBox2,
+.contentBox3,
+.contentBox4 {
+    
+    @include contentBox;
+}
+
+.attribution {
+    padding: 2px;
+    bottom: 0;
+    text-align: center;
+    font-size: 0.7rem;
+    
+    a{
+        text-decoration: none;
+    }
+    a:link{
+        color: blue;
+    }
+
+    a:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

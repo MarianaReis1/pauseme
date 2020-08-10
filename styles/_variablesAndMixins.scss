@@ -1,0 +1,45 @@
+//Colors and Fonts
+
+$primaryColor1:  #545F77;
+$primaryColor2:  #8EDAEF;
+$primaryColor3:  #6363B7;
+
+$neutralColor1: #3366CC;
+$neutralColor2: #A59F9A;
+$neutralColor3: #c9af93;
+
+$font1: 'Nunito', sans-serif;
+
+//Mixins
+
+@mixin contentBox {
+    position: relative;
+    display: inline-block;
+    img{
+        border-radius: 0.4rem;
+        width: 160px;
+    }
+    p{
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 40% ;
+        @include btn(80%);
+
+        transition: transform .5s;
+    }
+    p:hover{
+        transform: scale(1.2, 1.2);
+    }
+}
+
+@mixin btn($width) {
+    text-align: center;
+    border: 0.09rem solid white;
+    border-radius: 1rem;
+    color: white;
+    font-size: 0.8rem;
+    width: $width;
+    padding: 3%;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Pause Me</title>
+</head>
+<body>
+    <div class="innerTopBar">   
+        <a href="/"><img src="./src/pauseme_logo.png" alt="Logo"></a>
+        <p><a href="/">GO BACK</a></p>
+    </div> 
+    <div>
+        <video id="video" src="./src/beach/video-mobile.mp4"></video>
+        <div class="master">
+            <div class="container" onclick="start(), playPause()">
+    
+                <div class="circle"></div>
+                
+                <p id="text">Click Here<br>to Start</p>
+    
+                <div class="pointer-container">
+                    <div class="pointer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>

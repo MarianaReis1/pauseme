@@ -1,0 +1,303 @@
+.innerTopBar {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #c9af93;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5% 10%;
+}
+
+.innerTopBar img {
+  width: 10rem;
+}
+
+.innerTopBar p {
+  text-align: center;
+  line-height: 1.8rem;
+  height: 1.8rem;
+  border: 0.09rem solid white;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  padding: 0 25%;
+}
+
+.innerTopBar p a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: white;
+}
+
+#video {
+  position: fixed;
+  width: auto;
+  height: 100vh;
+}
+
+.master {
+  padding: 50% 0;
+}
+
+.master:hover {
+  cursor: pointer;
+}
+
+.container {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 150px;
+  width: 150px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  font-size: 1.3rem;
+  text-align: center;
+  color: #499429;
+}
+
+.circle {
+  background-color: whitesmoke;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.pointer-container {
+  position: absolute;
+  top: -30px;
+  left: 65px;
+  width: 20px;
+  height: 105px;
+}
+
+.pointer-animation {
+  -webkit-animation: rotateit 8s linear forwards infinite;
+          animation: rotateit 8s linear forwards infinite;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+
+.pointer {
+  background-color: ghostwhite;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+.grow {
+  -webkit-animation: grow 3s linear forwards;
+          animation: grow 3s linear forwards;
+}
+
+.shrink {
+  -webkit-animation: shrink 3s linear forwards;
+          animation: shrink 3s linear forwards;
+}
+
+@-webkit-keyframes rotateit {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateit {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes grow {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes grow {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@-webkit-keyframes shrink {
+  from {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes shrink {
+  from {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  background-image: url(../src/bgEffect.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.topBar {
+  background-color: #8EDAEF;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10% 12%;
+}
+
+.topBar h4 {
+  color: white;
+  display: block;
+  margin: auto;
+}
+
+.topBar img {
+  width: 280px;
+  padding: 10% 0;
+}
+
+.topBar .line2 {
+  float: right;
+  margin-top: -25px;
+}
+
+.mainContent {
+  color: #6363B7;
+  font-weight: 400;
+  font-size: 1.3rem;
+  padding: 10% 12%;
+  text-align: center;
+}
+
+.mainGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  gap: 15px;
+  padding: 0 12%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contentBox1,
+.contentBox2,
+.contentBox3,
+.contentBox4 {
+  position: relative;
+  display: inline-block;
+}
+
+.contentBox1 img,
+.contentBox2 img,
+.contentBox3 img,
+.contentBox4 img {
+  border-radius: 0.4rem;
+  width: 160px;
+}
+
+.contentBox1 p,
+.contentBox2 p,
+.contentBox3 p,
+.contentBox4 p {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 40%;
+  text-align: center;
+  border: 0.09rem solid white;
+  border-radius: 1rem;
+  color: white;
+  font-size: 0.8rem;
+  width: 80%;
+  padding: 3%;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.contentBox1 p:hover,
+.contentBox2 p:hover,
+.contentBox3 p:hover,
+.contentBox4 p:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.attribution {
+  padding: 2px;
+  bottom: 0;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.attribution a {
+  text-decoration: none;
+}
+
+.attribution a:link {
+  color: blue;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */
