@@ -1,3 +1,7 @@
+#innerBody {
+  overflow: hidden;
+}
+
 .innerTopBar {
   height: -webkit-fit-content;
   height: -moz-fit-content;

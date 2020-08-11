@@ -1,6 +1,11 @@
 @import './variablesAndMixins';
 
 
+//InnerBody
+#innerBody{
+    overflow: hidden;
+}
+
 //Nav Bar of inner pages
 .innerTopBar {
     height: fit-content;
