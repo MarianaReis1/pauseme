@@ -4,6 +4,8 @@
 //InnerBody
 #innerBody{
     overflow: hidden;
+    height: 100vh;
+    
 }
 
 //Nav Bar of inner pages
@@ -36,21 +38,16 @@ $innerTopBarHeight: fit-content;
     }
 }
 // 
-.innerPagesContainer {
-    height: calc(100vh - $innerTopBarHeight);
-}
+
 
 
 // Video config
-#videoWrap{
-    width: 100%;
-    height: fit-content;
-}
+
 
 #video {
     position: absolute;
     width: 100%;
-    // height: calc(100vh - $innerTopBarHeight); //ver 100vh -var(innerTop)
+    height: 100vh; //ver 100vh -var(innerTop)
     object-fit: cover;
     z-index: -99;
 }
@@ -61,7 +58,7 @@ $innerTopBarHeight: fit-content;
     position: absolute;
     left: 0;
     top: 60px;
-    // z-index: -1;
+    z-index: -1;
 }
 
 
@@ -71,7 +68,7 @@ $innerTopBarHeight: fit-content;
 
 .contentContainer {
     padding: 50% 0;
-    // z-index: 1;
+    z-index: 15;
     &:hover{
         cursor: pointer;
     }

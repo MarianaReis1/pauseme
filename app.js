@@ -41,7 +41,7 @@ function breatheAnimation(){
 // video function 
 
 let video = document.getElementById('video');
-let playBtn = document.getElementById('playBtn');
+let playBtn = document.getElementById('playVideoBtn');
 
 playBtn.addEventListener("click", function(){
     console.log("testing add");
