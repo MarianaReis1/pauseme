@@ -29,18 +29,38 @@
     }
 }
 
+
+// Video config
+
+
 #video {
     position: fixed;
     width: auto;
     height: 100vh; //ver 100vh -var(innerTop)
+    z-index: -99;
 }
+
+.videoOverlay {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    z-index: -1;
+
+
+    background-color: blue;
+    opacity: 0.5;
+}
+
+
 
 
 //Breath Guide
 
-.master {
+.contentContainer {
     padding: 50% 0;
-
+    z-index: 1;
     &:hover{
         cursor: pointer;
     }
