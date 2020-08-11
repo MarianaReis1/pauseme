@@ -40,6 +40,15 @@ function breatheAnimation(){
 
 // video function 
 
+let video = document.getElementById('video');
+let playBtn = document.getElementById('playBtn');
+
+playBtn.addEventListener("click", function(){
+    console.log("testing add");
+    video.play();
+});
+
+
 // function playPauseVideo() {  
     //     console.log("testing add event listner")
     //     if (video.paused) 
@@ -48,12 +57,3 @@ function breatheAnimation(){
     //       video.pause(); 
     // }
     
-    // video second option for play
-    
-let video = document.getElementById('video');
-let playBtn = document.getElementById('playBtn');
-
-playBtn.addEventListener("click", function(){
-    console.log("testing add");
-    video.play();
-});
