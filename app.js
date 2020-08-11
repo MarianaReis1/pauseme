@@ -47,13 +47,3 @@ playBtn.addEventListener("click", function(){
     console.log("testing add");
     video.play();
 });
-
-
-// function playPauseVideo() {  
-    //     console.log("testing add event listner")
-    //     if (video.paused) 
-    //       video.play(); 
-    //     else 
-    //       video.pause(); 
-    // }
-    
