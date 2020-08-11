@@ -1,5 +1,5 @@
 @import './variablesAndMixins';
-@import './secondaryPages';
+@import './innerPage';
 
 * {
     box-sizing: border-box;
@@ -10,19 +10,25 @@
 body {
     font-size: 16px;
     font-family: $font1;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#homeBody {
     background-image: url(../src/bgEffect.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
-    width: 100%;
-    overflow-x: hidden;
+}
 
+#homeBody, 
+#innerPageBody{
+    height: 100vh;
 }
 
 .topBar{
     background-color: $primaryColor2;
-    height: fit-content;
-    padding: 10%;
+    --height: fit-content;
+    padding: 5% 10% 10% 10%;
 
     h4{
         color: white;
@@ -31,12 +37,10 @@ body {
     }
     img{
         width: 280px;
-        padding: 10% 0;
+        padding: 8% 0;
     }
     .line2{
-        float: right;
-        margin-top: -25px;
-    
+        float: right;   
     }
 }
 
@@ -52,34 +56,31 @@ body {
     display: grid;
     grid-template-columns: auto auto;
     gap: 10px;
-    padding: 0 12%;
-    justify-content: space-evenly;   
-
+    padding: 0 10%;
+    justify-content: space-around;   
+    height: 100% - (var(--height));
 }
 
 .contentBox1,
 .contentBox2,
 .contentBox3,
 .contentBox4 {
-    
     @include contentBox;
 }
 
 .attribution {
+    position: absolute;
     padding: 2px;
     bottom: 0;
-    text-align: center;
     font-size: 0.7rem;
-    
+    //add here tranform to center it
     a{
         text-decoration: none;
     }
     a:link{
         color: blue;
     }
-
     a:hover{
         text-decoration: underline;
-        cursor: pointer;
     }
 }

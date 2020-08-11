@@ -8,32 +8,34 @@
     <title>Pause Me</title>
 </head>
 <body id="innerBody">
-    <div class="innerTopBar">   
-        <a href="./index.html"><img src="./src/pauseme_logo.png" alt="Logo"></a>
-        <p><a href="./index.html">GO BACK</a></p>
-    </div> 
-    <div class="innerPagesContainer">
-        <div id="videoWrap">
-            <video loop="true" playsinline="" autobuffer="true" id="video" poster="src/beach/beach-poster-mobile.jpg">
-                <source src="./src/beach/beach-video-mobile.mp4" type="video/mp4">
-                <source src="./src/beach/beach-video-mobile.webm" type="video/webm">
-                Your Browser does not support the video tag.
-            </video>
-        </div>
-        <div id="videoOverlay"></div>
-        <div class="contentContainer" id="playVideoBtn" onclick="startbreatheAnimation()">
-            <div class="container">
-    
-                <div class="circle"></div>
-                
-                <p id="text">Click Here<br>to Start</p>
-    
-                <div class="pointer-container">
-                    <div class="pointer"></div>
+    <div class="innerPageBody">  
+        <div class="innerTopBar">   
+            <a href="./index.html"><img src="./src/pauseme_logo.png" alt="Logo"></a>
+            <p><a href="./index.html">GO BACK</a></p>
+        </div> 
+        <div class="innerPagesContainer">
+            <div id="videoWrap">
+                <video loop="true" playsinline="" autobuffer="true" id="video" poster="src/beach/beach-poster-mobile.jpg">
+                    <source src="./src/beach/beach-video-mobile.mp4" type="video/mp4">
+                    <source src="./src/beach/beach-video-mobile.webm" type="video/webm">
+                    Your Browser does not support the video tag.
+                </video>
+            </div>
+            <div id="videoOverlay"></div>
+            <div id="breathGuideContainer" id="playVideoBtn" onclick="startbreatheAnimation()">
+                <div class="container">
+        
+                    <div class="circle"></div>
+                    
+                    <p id="text">Click Here<br>to Start</p>
+        
+                    <div class="pointer-container">
+                        <div class="pointer"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-<script src="appInnerPage.js"></script>
+<script src="innerPage.js"></script>
 </body>
 </html>
