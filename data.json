@@ -1,0 +1,61 @@
+{
+"categories": 
+[
+    {
+    "type": "mobile", 
+    "source": 
+        [
+            {   
+                "name": "Beach",
+                "poster": "src/beach/beach-poster-mobile.jpg",
+                "src": "./src/beach/beach-video-mobile.mp4"
+            },
+            {   
+                "name": "rain",
+                "poster": "src/beach/rain-poster-mobile.jpg",
+                "src": "./src/beach/rain-video-mobile.mp4"
+            },
+            {   
+                "name": "birds",
+                "poster": "src/beach/birds-poster-mobile.jpg",
+                "src": "./src/beach/birds-video-mobile.mp4"
+            },
+            {   
+                "name": "waterfall",
+                "poster": "src/beach/waterfall-poster-mobile.jpg",
+                "src": "./src/beach/waterfall-video-mobile.mp4"
+            }
+        ]
+    },
+    {
+    "type": "desktop", 
+    "source": 
+        [
+            {   
+                "name": "Beach",
+                "poster": "src/beach/beach-poster-desktop.jpg",
+                "src": "./src/beach/beach-video-desktop.mp4"
+            },
+            {   
+                "name": "rain",
+                "poster": "src/beach/rain-poster-desktop.jpg",
+                "src": "./src/beach/rain-video-desktop.mp4"
+            },
+            {   
+                "name": "birds",
+                "poster": "src/beach/birds-poster-desktop.jpg",
+                "src": "./src/beach/birds-video-desktop.mp4"
+            },
+            {   
+                "name": "waterfall",
+                "poster": "src/beach/waterfall-poster-desktop.jpg",
+                "src": "./src/beach/waterfall-video-desktop.mp4"
+            }
+        ]
+    }
+]
+}
+
+
+
+

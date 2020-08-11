@@ -25,6 +25,10 @@ body {
     height: 100vh;
 }
 
+#innerPageBody {
+    display: none;
+}
+
 .topBar{
     background-color: $primaryColor2;
     --height: fit-content;
@@ -72,7 +76,7 @@ body {
     padding: 2px;
     bottom: 0;
     font-size: 0.7rem;
-    //add here tranform to center it
+    transform: translate(20%, 0);
     a{
         text-decoration: none;
     }

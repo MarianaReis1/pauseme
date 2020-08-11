@@ -202,6 +202,10 @@ body {
   height: 100vh;
 }
 
+#innerPageBody {
+  display: none;
+}
+
 .topBar {
   background-color: #8EDAEF;
   --height: fit-content;
@@ -293,6 +297,8 @@ body {
   padding: 2px;
   bottom: 0;
   font-size: 0.7rem;
+  -webkit-transform: translate(20%, 0);
+          transform: translate(20%, 0);
 }
 
 .attribution a {
