@@ -7,7 +7,7 @@ const totalTime = 8000;
 const breathTime = (totalTime / 5) * 2;
 const holdTime = totalTime / 5;
 
-function start() {
+function startbreatheAnimation() {
     if(pointer.className === 'pointer-container'){
         breatheAnimation();
     } else {
@@ -39,11 +39,21 @@ function breatheAnimation(){
 }
 
 // video function 
-let video = document.getElementById('video');
 
-function playPause() {  
-    if (video.paused) 
-      video.play(); 
-    else 
-      video.pause(); 
-}
+// function playPauseVideo() {  
+    //     console.log("testing add event listner")
+    //     if (video.paused) 
+    //       video.play(); 
+    //     else 
+    //       video.pause(); 
+    // }
+    
+    // video second option for play
+    
+let video = document.getElementById('video');
+let playBtn = document.getElementById('playBtn');
+
+playBtn.addEventListener("click", function(){
+    console.log("testing add");
+    video.play();
+});

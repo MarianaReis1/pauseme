@@ -251,9 +251,9 @@ body {
       grid-template-columns: auto auto;
   gap: 15px;
   padding: 0 12%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .contentBox1,
