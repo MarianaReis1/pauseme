@@ -4,19 +4,23 @@
 //InnerBody
 #innerBody{
     overflow: hidden;
+    height: 100vh;
+    
 }
 
 //Nav Bar of inner pages
+
+$innerTopBarHeight: fit-content;
+
 .innerTopBar {
-    height: fit-content;
+    height: $innerTopBarHeight;
     background-color: $neutralColor3;
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
     justify-content: space-between;
-    padding: 5% 10%;
+    padding: 5% 10% 2% 10%;
 
     img {
-        width: 10rem;
+        width: 9.5rem;
     }
     p{
         text-align: center;
@@ -24,8 +28,9 @@
         height: 1.8rem;
         border: 0.09rem solid white;
         border-radius: 1.5rem;
-        font-size: 1rem;
-        padding: 0 25%;
+        font-size: 0.7rem;
+        padding: 0 7%;
+
         a{
             white-space: nowrap;
             text-decoration: none;
@@ -34,38 +39,31 @@
     }
 }
 
-
 // Video config
 
-
 #video {
-    position: fixed;
-    width: auto;
-    height: 100vh; //ver 100vh -var(innerTop)
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
     z-index: -99;
 }
 
-.videoOverlay {
+#videoOverlay {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     left: 0;
     top: 60px;
     z-index: -1;
-
-
-    background-color: blue;
-    opacity: 0.5;
 }
-
-
 
 
 //Breath Guide
 
 .contentContainer {
     padding: 50% 0;
-    z-index: 1;
+    z-index: 15;
     &:hover{
         cursor: pointer;
     }
