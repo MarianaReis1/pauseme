@@ -1,3 +1,5 @@
+//Breath Guide
+
 const container = document.querySelector('.container');
 const pointer = document.querySelector('.pointer-container');
 const text = document.querySelector('#text');
@@ -35,8 +37,6 @@ function breatheAnimation(){
 
     setInterval(breatheAnimation, totalTime);
 }
-
-
 
 // video function 
 let video = document.getElementById('video');
