@@ -47,3 +47,6 @@ playBtn.addEventListener("click", function(){
     console.log("testing add");
     video.play();
 });
+
+
+

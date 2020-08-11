@@ -28,7 +28,7 @@
   height: 1.8rem;
   border: 0.09rem solid white;
   border-radius: 1.5rem;
-  font-size: 1rem;
+  font-size: 0.7rem;
   padding: 0 25%;
 }
 
@@ -49,7 +49,7 @@
 
 #videoOverlay {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   position: absolute;
   left: 0;
   top: 60px;
@@ -203,7 +203,12 @@
 body {
   font-size: 16px;
   font-family: "Nunito", sans-serif;
+  background-image: url(../src/bgEffect.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .topBar {
@@ -211,7 +216,7 @@ body {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 10% 12%;
+  padding: 10%;
 }
 
 .topBar h4 {
@@ -234,7 +239,7 @@ body {
   color: #6363B7;
   font-weight: 400;
   font-size: 1.3rem;
-  padding: 10% 12%;
+  padding: 7% 10%;
   text-align: center;
 }
 
@@ -243,11 +248,11 @@ body {
   display: grid;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
-  gap: 15px;
+  gap: 10px;
   padding: 0 12%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .contentBox1,
