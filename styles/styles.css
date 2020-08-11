@@ -8,18 +8,17 @@
   height: -moz-fit-content;
   height: fit-content;
   background-color: #c9af93;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 5% 10%;
+  padding: 5% 10% 2% 10%;
 }
 
 .innerTopBar img {
-  width: 10rem;
+  width: 9.5rem;
 }
 
 .innerTopBar p {
@@ -29,7 +28,7 @@
   border: 0.09rem solid white;
   border-radius: 1.5rem;
   font-size: 0.7rem;
-  padding: 0 25%;
+  padding: 0 7%;
 }
 
 .innerTopBar p a {
