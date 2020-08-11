@@ -42,7 +42,7 @@
     position: fixed;
     width: auto;
     height: 100vh; //ver 100vh -var(innerTop)
-    z-index: -99;
+    // z-index: -99;
 }
 
 .videoOverlay {
@@ -51,7 +51,7 @@
     position: absolute;
     left: 0;
     top: 60px;
-    z-index: -1;
+    // z-index: -1;
 
 
     background-color: blue;
@@ -65,7 +65,7 @@
 
 .contentContainer {
     padding: 50% 0;
-    z-index: 1;
+    // z-index: 1;
     &:hover{
         cursor: pointer;
     }
