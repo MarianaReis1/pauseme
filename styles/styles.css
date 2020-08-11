@@ -240,7 +240,6 @@ body {
   padding: 0 10%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 100%-var(--height);
 }
 
 .contentBox1,
