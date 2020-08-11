@@ -37,13 +37,23 @@
   color: white;
 }
 
-#video {
-  position: fixed;
-  width: auto;
-  height: 100vh;
+#videoWrap {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
-.videoOverlay {
+#video {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -99;
+}
+
+#videoOverlay {
   height: 100vh;
   width: 100vw;
   position: absolute;
