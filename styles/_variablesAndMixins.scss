@@ -1,3 +1,11 @@
+//BreakPoints
+
+$mobile_height_breakpoint: 670px;
+$tablet_width_breakpoint: 768px;
+$desktopSmall_width_breakpoint: 992px;
+$desktopBig_width_breakpoint: 1200px;
+
+
 //Colors and Fonts
 
 $primaryColor1:  #545F77;
@@ -17,16 +25,14 @@ $font1: 'Nunito', sans-serif;
     display: inline-block;
     img{
         border-radius: 0.4rem;
-        width: 160px;
+        width: 100%;
     }
     p{
         position: absolute;
         margin: 0 auto;
         left: 0;
         right: 0;
-        top: 40% ;
-        @include btn(80%);
-
+        top: 40%;
         transition: transform .5s;
     }
     p:hover{
@@ -34,12 +40,14 @@ $font1: 'Nunito', sans-serif;
     }
 }
 
-@mixin btn($width) {
+@mixin btn() {
     text-align: center;
     border: 0.09rem solid white;
     border-radius: 1rem;
     color: white;
-    font-size: 0.8rem;
-    width: $width;
+    width: 80%;
     padding: 3%;
 }
+
+
+

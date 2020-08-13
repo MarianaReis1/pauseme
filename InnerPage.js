@@ -7,7 +7,7 @@ const totalTime = 8000;
 const breathTime = (totalTime / 5) * 2;
 const holdTime = totalTime / 5;
 
-function startbreatheAnimation() {
+function startBreatheAnimation() {
     if(pointer.className === 'pointer-container'){
         breatheAnimation();
     } else {

@@ -199,7 +199,7 @@ body {
 
 #homeBody,
 #innerPageBody {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #innerPageBody {
@@ -209,7 +209,7 @@ body {
 .topBar {
   background-color: #8EDAEF;
   --height: fit-content;
-  padding: 5% 10% 10% 10%;
+  padding: 5% 10%;
 }
 
 .topBar h4 {
@@ -219,19 +219,27 @@ body {
 }
 
 .topBar img {
-  width: 280px;
-  padding: 8% 0;
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+  padding: 5% 0;
+}
+
+.topBar .line1 {
+  display: block;
 }
 
 .topBar .line2 {
+  display: block;
   float: right;
+  margin-top: -5%;
 }
 
 .mainContent {
   color: #6363B7;
   font-weight: 400;
   font-size: 1.3rem;
-  padding: 7% 10%;
+  padding: 8% 10%;
   text-align: center;
 }
 
@@ -259,7 +267,7 @@ body {
 .contentBox3 img,
 .contentBox4 img {
   border-radius: 0.4rem;
-  width: 160px;
+  width: 100%;
 }
 
 .contentBox1 p,
@@ -271,13 +279,6 @@ body {
   left: 0;
   right: 0;
   top: 40%;
-  text-align: center;
-  border: 0.09rem solid white;
-  border-radius: 1rem;
-  color: white;
-  font-size: 0.8rem;
-  width: 80%;
-  padding: 3%;
   -webkit-transition: -webkit-transform .5s;
   transition: -webkit-transform .5s;
   transition: transform .5s;
@@ -292,13 +293,26 @@ body {
           transform: scale(1.2, 1.2);
 }
 
-.attribution {
-  position: absolute;
-  padding: 2px;
-  bottom: 0;
+.contentBox1 p,
+.contentBox2 p,
+.contentBox3 p,
+.contentBox4 p {
+  text-align: center;
+  border: 0.09rem solid white;
+  border-radius: 1rem;
+  color: white;
+  width: 80%;
+  padding: 3%;
   font-size: 0.7rem;
-  -webkit-transform: translate(18%, 0);
-          transform: translate(18%, 0);
+}
+
+.attribution {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.7rem;
 }
 
 .attribution a {
@@ -311,5 +325,56 @@ body {
 
 .attribution a:hover {
   text-decoration: underline;
+}
+
+@media all and (min-height: 670px) {
+  .topBar img {
+    padding-top: 8%;
+    padding-bottom: 8%;
+  }
+  .mainContent {
+    padding: 15% 10%;
+    line-height: 1.6;
+  }
+  .mainGrid {
+    row-gap: 3%;
+    -webkit-column-gap: 4%;
+            column-gap: 4%;
+    padding: 8% 8% 0 8%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .topBar img {
+    width: 65%;
+  }
+  .topBar .line1 {
+    font-size: 1.5rem;
+  }
+  .topBar .line2 {
+    font-size: 1.5rem;
+  }
+  .mainContent {
+    padding: 2% 10%;
+    font-size: 1.6rem;
+    line-height: 2;
+  }
+  .mainGrid {
+    row-gap: 3%;
+    -webkit-column-gap: 4%;
+            column-gap: 4%;
+    padding: 0 10% 5% 10%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .contentBox1 p,
+  .contentBox2 p,
+  .contentBox3 p,
+  .contentBox4 p {
+    font-size: 1rem;
+    border-radius: 1.3rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
