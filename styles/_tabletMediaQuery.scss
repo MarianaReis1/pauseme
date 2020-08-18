@@ -1,0 +1,39 @@
+@import './variablesAndMixins';
+
+@media all and (min-width: $tablet_width_breakpoint){
+    .topBar{
+
+        img{
+            width: 65%;
+        }
+        .line1{
+            font-size: 1.5rem;
+        }
+        .line2{
+            font-size: 1.5rem;
+        }
+    }
+    
+    .mainContent {
+        padding: 2% 10%;
+        font-size: 1.6rem;
+        line-height: 2;
+    }
+
+    .mainGrid{
+        row-gap: 3%;
+        column-gap: 4%;
+        padding: 0 10% 5% 10%;
+        justify-content: space-around;   
+    }
+
+    .contentBox1,
+    .contentBox2,
+    .contentBox3,
+    .contentBox4 {
+        p{
+            font-size: 1rem;
+            border-radius: 1.3rem;
+        }
+    }
+}

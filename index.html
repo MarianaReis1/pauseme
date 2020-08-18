@@ -8,46 +8,70 @@
     <title>Pause Me</title>
 </head>
 <body>
+    <div id="homeBody">
+        <div class="topBar">   
+            <h4 class="line1">WELCOME TO</h4>
+            <img src="./src/pauseme_logo.png" alt="Logo">
+            <h4 class="line2">YOUR PLACE TO BREATH.</h4>
+        </div> 
+        <h4 class="mainContent">Pick your favorite scene and<br>follow the breath guide.</h4>
+
+        <div class="mainGrid">
+            <div class="contentBox1">
+                <a href="#video">
+                    <img src="./src/beach/beach-thumbnail.png" alt="Beach Thumbnail">
+                    <p>BEACH SUNSET</p>
+                </a>
+            </div>
+            <div class="contentBox2">
+                <a href="#video">
+                    <img src="./src/rain/rain-thumbnail.png" alt="Rain Thumbnail">
+                    <p>COZY RAIN</p>
+                </a>
+            </div>
+            <div class="contentBox3">
+                <a href="#video">
+                    <img src="./src/birds/birds-thumbnail.png" alt="Birds Thumbnail">
+                    <p>BIRDS ENERGY</p>
+                </a>
+            </div>
+            <div class="contentBox4">
+                <a href="#video">
+                    <img src="./src/waterfall/waterfall-thumbnail.png" alt="Rain Thumbnail">
+                    <p>ZEN WATERFALL</p>
+                </a>
+            </div>
+        </div>
+        <div class="attribution">
+            <p>
+                Coded by <a href="marianareis.co">Mariana Reis</a>
+                Designed by <a href="marianareis.co">Thamyres Mitidieri</a>
+            </p>
+        </div>
+    </div>
+    <div id="innerPageBody">  
+        <div id="videoWrap">
+            <video src="" loop="true" playsinline="" autobuffer="true" id="video" >
+                Your Browser does not support the video tag.
+            </video>
+        </div>
+        <div class="innerTopBar">   
+            <a href="https://marianareis1.github.io/pauseme/"><img src="./src/pauseme_logo.png" alt="Logo"></a>
+            <p><a href="https://marianareis1.github.io/pauseme/">GO BACK</a></p>
+        </div>            
+        <div id="breathGuideContainer" class="playVideoBtn" onclick="startBreatheAnimation()">
+            <div class="container">
     
-    <div class="topBar">   
-        <h4 class="line1">WELCOME TO</h4>
-        <img src="./src/pauseme_logo.png" alt="Logo">
-        <h4 class="line2">YOUR PLACE TO BREATH.</h4>
-    </div> 
-    <h4 class="mainContent">Pick your favorite scene and<br>follow the breath guide.</h4>
-
-<div class="mainGrid">
-    <div class="contentBox1">
-        <a href="./beach.html">
-            <img src="./src/beach/beach-thumbnail.png" alt="Beach Thumbnail">
-            <p>BEACH SUNSET</p>
-        </a>
+                <div class="circle"></div>
+                
+                <p id="text">Click Here<br>to Start</p>
+    
+                <div class="pointer-container">
+                    <div class="pointer"></div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="contentBox2">
-        <a href="">
-            <img src="./src/rain/rain-thumbnail.png" alt="Rain Thumbnail">
-            <p>COZY RAIN</p>
-        </a>
-    </div>
-    <div class="contentBox3">
-        <a href="">
-            <img src="./src/birds/birds-thumbnail.png" alt="Birds Thumbnail">
-            <p>BIRDS ENERGY</p>
-        </a>
-    </div>
-    <div class="contentBox4">
-        <a href="">
-            <img src="./src/waterfall/waterfall-thumbnail.png" alt="Rain Thumbnail">
-            <p>ZEN WATERFALL</p>
-        </a>
-    </div>
-</div>
-
-
-<div class="attribution">
-    <p>Coded by <a href="marianareis.co">Mariana Reis</a>
-    Designed by <a href="marianareis.co">Thamyres Mitidieri</a></p>
-</div>
-<script src="homePage.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
