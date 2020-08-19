@@ -1,4 +1,4 @@
-//Breath Guide
+// Breath Guide
 
 const container = document.querySelector('.container');
 const pointer = document.querySelector('.pointer-container');
@@ -7,9 +7,9 @@ const totalTime = 8000;
 const breathTime = (totalTime / 5) * 2;
 const holdTime = totalTime / 5;
 
-function startBreatheAnimation() {
+function startBreatheGuide() {
     if(pointer.className === 'pointer-container'){
-        breatheAnimation();
+        breatheGuide();
     } else {
         pointer.className = 'pointer-container pointer-animation'
         reset()
@@ -20,9 +20,8 @@ function reset(){
     document.location.href="";
 }
  
-function breatheAnimation(){
+function breatheGuide(){
     pointer.className = 'pointer-container pointer-animation';
-    console.log("started")
     text.innerHTML = 'Breath In';
     container.className = 'container grow';
     
@@ -35,53 +34,89 @@ function breatheAnimation(){
         }, holdTime)
     }, breathTime)
 
-    setInterval(breatheAnimation, totalTime);
+    setInterval(breatheGuide, totalTime);
 }
 
-// Video Play Function 
+
+//Show Inner Page when any Scene is selected
+function showInnerPage(){
+    return document.getElementById('innerPageBody').style.display = "block";
+}
+
+// Play Video Function 
 
 let video = document.getElementById('video');
 let playBtn = document.querySelector('.playVideoBtn');
 
 playBtn.addEventListener("click", function(){
-    console.log("testing add");
     video.play();
 });
 
-// Video Source
+
+// Video Source (SECOND VERSION)
 
 const videoSrc = document.getElementById('video');
 
-const content1 = document.querySelector('.contentBox1');
-const content2 = document.querySelector('.contentBox2');
-const content3 = document.querySelector('.contentBox3');
-const content4 = document.querySelector('.contentBox4');
+function getIdAndLoadData(idSelected) {
+    const videoSelected = document.getElementById(idSelected);
 
-function showInnerPage(){
-    return document.getElementById('innerPageBody').style.display = "block";
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState == 4 && xhr.status == 200  || xhr.status == 304){
+            let objJS = JSON.parse(xhr.responseText)
+            videoSelected.addEventListener("click", function(){
+                if(window.innerWidth < 992){
+                    showInnerPage()
+                    videoSrc.src = objJS.mobile[idSelected];
+                } else {
+                    videoSrc.src = objJS.desktop[idSelected];
+                }
+
+            });
+        }
+    }
+    
+    xhr.open("GET", "data.json", true);
+    xhr.send();
 }
 
 
 
-content1.addEventListener("click", function(){
-    showInnerPage()
-    console.log('testing beach');
-    videoSrc.src = "./src/beach/beach-video-mobile.mp4";
-});
-content2.addEventListener("click", function(){
-    showInnerPage()
-    console.log('testing cozy rain');
-    videoSrc.src = "./src/rain/rain-video-mobile.mp4";
-});
-content3.addEventListener("click", function(){
-    showInnerPage()
-    console.log('testing birds');
-    videoSrc.src = "./src/birds/birds-video-mobile.mp4";
-});
-content4.addEventListener("click", function(){
-    showInnerPage()
-    console.log('testing waterfall');
-    videoSrc.src = "./src/waterfall/waterfall-video-mobile.mp4";
-});
+
+
+
+
+
+
+
+//FIRST VERSION FOR JS SELECTION OF VIDEOS (HARDCODED)
+
+
+// const content1 = document.getElementById('beach');
+// const content2 = document.getElementById('rain');
+// const content3 = document.getElementById('birds');
+// const content4 = document.getElementById('waterfall');
+
+
+// content1.addEventListener("click", function(){
+//     showInnerPage()
+//     // console.log('testing beach');
+//     videoSrc.src = "./src/beach/beach-video-mobile.mp4";
+// // });
+// content2.addEventListener("click", function(){
+//     showInnerPage()
+//     console.log('testing cozy rain');
+//     videoSrc.src = "./src/rain/rain-video-mobile.mp4";
+// });
+// content3.addEventListener("click", function(){
+//     showInnerPage()
+//     console.log('testing birds');
+//     videoSrc.src = "./src/birds/birds-video-mobile.mp4";
+// });
+// content4.addEventListener("click", function(){
+//     showInnerPage()
+//     console.log('testing waterfall');
+//     videoSrc.src = "./src/waterfall/waterfall-video-mobile.mp4";
+// });
 
 

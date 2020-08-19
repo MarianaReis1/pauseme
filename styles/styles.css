@@ -254,26 +254,17 @@ body {
       justify-content: space-around;
 }
 
-.contentBox1,
-.contentBox2,
-.contentBox3,
-.contentBox4 {
+.contentBox {
   position: relative;
   display: inline-block;
 }
 
-.contentBox1 img,
-.contentBox2 img,
-.contentBox3 img,
-.contentBox4 img {
+.contentBox img {
   border-radius: 0.4rem;
   width: 100%;
 }
 
-.contentBox1 p,
-.contentBox2 p,
-.contentBox3 p,
-.contentBox4 p {
+.contentBox p {
   position: absolute;
   margin: 0 auto;
   left: 0;
@@ -285,18 +276,12 @@ body {
   transition: transform .5s, -webkit-transform .5s;
 }
 
-.contentBox1 p:hover,
-.contentBox2 p:hover,
-.contentBox3 p:hover,
-.contentBox4 p:hover {
+.contentBox p:hover {
   -webkit-transform: scale(1.2, 1.2);
           transform: scale(1.2, 1.2);
 }
 
-.contentBox1 p,
-.contentBox2 p,
-.contentBox3 p,
-.contentBox4 p {
+.contentBox p {
   text-align: center;
   border: 0.09rem solid white;
   border-radius: 1rem;

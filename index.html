@@ -17,25 +17,25 @@
         <h4 class="mainContent">Pick your favorite scene and<br>follow the breath guide.</h4>
 
         <div class="mainGrid">
-            <div class="contentBox1">
+            <div class="contentBox" id="beach" onclick="getIdAndLoadData(this.id)">
                 <a href="#video">
                     <img src="./src/beach/beach-thumbnail.png" alt="Beach Thumbnail">
                     <p>BEACH SUNSET</p>
                 </a>
             </div>
-            <div class="contentBox2">
+            <div class="contentBox" id="rain" onclick="getIdAndLoadData(this.id)">
                 <a href="#video">
                     <img src="./src/rain/rain-thumbnail.png" alt="Rain Thumbnail">
                     <p>COZY RAIN</p>
                 </a>
             </div>
-            <div class="contentBox3">
+            <div class="contentBox" id="birds" onclick="getIdAndLoadData(this.id)">
                 <a href="#video">
                     <img src="./src/birds/birds-thumbnail.png" alt="Birds Thumbnail">
                     <p>BIRDS ENERGY</p>
                 </a>
             </div>
-            <div class="contentBox4">
+            <div class="contentBox"  id="waterfall" onclick="getIdAndLoadData(this.id)">
                 <a href="#video">
                     <img src="./src/waterfall/waterfall-thumbnail.png" alt="Rain Thumbnail">
                     <p>ZEN WATERFALL</p>
@@ -56,10 +56,10 @@
             </video>
         </div>
         <div class="innerTopBar">   
-            <a href="https://marianareis1.github.io/pauseme/"><img src="./src/pauseme_logo.png" alt="Logo"></a>
-            <p><a href="https://marianareis1.github.io/pauseme/">GO BACK</a></p>
+            <a href=""><img src="./src/pauseme_logo.png" alt="Logo"></a>
+            <p><a href="">GO BACK</a></p>
         </div>            
-        <div id="breathGuideContainer" class="playVideoBtn" onclick="startBreatheAnimation()">
+        <div id="breathGuideContainer" class="playVideoBtn" onclick="startBreatheGuide()">
             <div class="container">
     
                 <div class="circle"></div>
@@ -73,5 +73,6 @@
         </div>
     </div>
 <script src="app.js"></script>
+<script src="ajax.js"></script>
 </body>
 </html>

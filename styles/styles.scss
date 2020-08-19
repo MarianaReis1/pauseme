@@ -73,10 +73,7 @@ body {
     justify-content: space-around;   
 }
 
-.contentBox1,
-.contentBox2,
-.contentBox3,
-.contentBox4 {
+.contentBox {
     @include contentBox;
     p {
         @include btn();
