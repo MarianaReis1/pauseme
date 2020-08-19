@@ -2,7 +2,7 @@
 
 @media all and (min-width: $tablet_width_breakpoint){
     .topBar{
-
+        padding: 5% 10%;
         img{
             width: 65%;
         }
@@ -15,9 +15,8 @@
     }
     
     .mainContent {
-        padding: 2% 10%;
-        font-size: 1.6rem;
-        line-height: 2;
+        padding: 4% 20%;
+        font-size: 1.5rem;
     }
 
     .mainGrid{
@@ -27,10 +26,7 @@
         justify-content: space-around;   
     }
 
-    .contentBox1,
-    .contentBox2,
-    .contentBox3,
-    .contentBox4 {
+    .contentBox {
         p{
             font-size: 1rem;
             border-radius: 1.3rem;
