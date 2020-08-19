@@ -1,0 +1,116 @@
+@import './variablesAndMixins';
+@import './innerPage';
+
+@media all and (min-width: $desktopSmall_width_breakpoint){
+//update display once finishing edtiting
+    // #homeBody{
+    //     display: none;
+    // } 
+    // #innerPageBody{
+    //     display: block;
+    // }
+
+    .topBar{
+        padding: 2% 22%;
+        img{
+            width: 40%;
+        }
+        .line1{
+            font-size: 1.3rem;
+            padding-left: 10%;
+        }
+        .line2{
+            font-size: 1.3rem;
+            margin-top: -2%; 
+            padding-right: 5%;
+        }
+    }
+    
+    .mainContent {
+        padding: 3% 20%;
+        font-size: 1.5rem;
+    }
+
+    .mainGrid{
+        grid-template-columns: auto auto auto auto;
+        row-gap: 3%;
+        column-gap: 4%;
+        padding: 0 10% 5% 10%;
+        justify-content: space-around;   
+    }
+
+    .contentBox {
+        p{
+            font-size: 1.2rem;
+            border-radius: 1.3rem;
+        }
+    }
+
+    .innerTopBar {
+        padding: 2% 15% 1.5% 15%;
+        img {
+            width: 15rem;
+            opacity: 1;
+        }
+        p{
+            border: 0.09rem solid white;
+            border-radius: 1.5rem;
+            font-size: 1.3rem;
+            padding: 0 5%;
+    
+            a{
+                white-space: nowrap;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+
+    #breathGuideContainer {
+        padding: 13% 0;
+        z-index: 15;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .container {
+        height: 300px;
+        width: 300px;
+        font-size: 2rem;
+    }
+    
+    .pointer-container { 
+        top:-60px;
+        left: 130px;
+        width: 40px;
+        height: 210px;
+    }
+    
+    .pointer  {
+        background-color: ghostwhite;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+    }
+
+    
+    @keyframes grow  {
+        from {
+            transform: scale(1)
+        }
+        to {
+            transform: scale(1.4)
+        }
+    }
+
+
+    @keyframes shrink  {
+        from {
+            transform: scale(1.4)
+        }
+        to {
+            transform: scale(1)
+        }
+    }
+}

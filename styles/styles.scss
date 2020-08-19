@@ -13,22 +13,21 @@ body {
     font-size: 16px;
     font-family: $font1;
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 #homeBody {
     background-image: url(../src/bgEffect.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+    display: block;
 }
 
-#homeBody, 
-#innerPageBody{
-    height: 100vh;
-}
 
 #innerPageBody {
     display: none;
+    height: 100vh;
 }
 
 .topBar{
@@ -101,3 +100,4 @@ body {
 }
 
 @import './tabletMediaQuery';
+@import './desktopMediaQuery';

@@ -40,7 +40,8 @@ function breatheGuide(){
 
 //Show Inner Page when any Scene is selected
 function showInnerPage(){
-    return document.getElementById('innerPageBody').style.display = "block";
+    document.getElementById('innerPageBody').style.display = "block";
+    document.getElementById('homeBody').style.display = "none";
 }
 
 // Play Video Function 
@@ -65,8 +66,8 @@ function getIdAndLoadData(idSelected) {
         if(xhr.readyState == 4 && xhr.status == 200  || xhr.status == 304){
             let objJS = JSON.parse(xhr.responseText)
             videoSelected.addEventListener("click", function(){
+                showInnerPage()
                 if(window.innerWidth < 992){
-                    showInnerPage()
                     videoSrc.src = objJS.mobile[idSelected];
                 } else {
                     videoSrc.src = objJS.desktop[idSelected];
