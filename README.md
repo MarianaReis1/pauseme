@@ -1,4 +1,4 @@
-# pauseme-js
+# PauseMe
 
 PauseMe is a breath guide webapp. It has a friendly and simple UX Design and was built with Vanilla JS, Sass and BEM. 
 
