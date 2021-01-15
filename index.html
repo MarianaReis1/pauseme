@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
     <title>Pause Me</title>
 </head>
+
 <body>
     <div id="homeBody">
-        <div class="topBar">   
+        <div class="topBar">
             <h4 class="line1">WELCOME TO</h4>
             <img src="./src/pauseme_logo.png" alt="Logo">
             <h4 class="line2">YOUR PLACE TO BREATH.</h4>
-        </div> 
-        <h5 class="mainContent">Double click on your favorite scene and follow the breath guide.</h5>
+        </div>
+        <h5 class="mainContent">Click on your favorite scene and follow the breath guide.</h5>
 
         <div class="mainGrid">
-            <div class="contentBox" id="beach" onclick="getIdAndLoadData(this.id)">
+            <div class="contentBox" id="beach" onclick="sceneSelected(this.id)">
                 <a href="#video">
                     <img src="./src/beach/beach-thumbnail.png" alt="Beach Thumbnail">
                     <p>BEACH SUNSET</p>
                 </a>
             </div>
-            <div class="contentBox" id="rain" onclick="getIdAndLoadData(this.id)">
+            <div class="contentBox" id="rain" onclick="sceneSelected(this.id)">
                 <a href="#video">
                     <img src="./src/rain/rain-thumbnail.png" alt="Rain Thumbnail">
                     <p>COZY RAIN</p>
                 </a>
             </div>
-            <div class="contentBox" id="birds" onclick="getIdAndLoadData(this.id)">
+            <div class="contentBox" id="birds" onclick="sceneSelected(this.id)">
                 <a href="#video">
                     <img src="./src/birds/birds-thumbnail.png" alt="Birds Thumbnail">
                     <p>BIRDS ENERGY</p>
                 </a>
             </div>
-            <div class="contentBox"  id="waterfall" onclick="getIdAndLoadData(this.id)">
+            <div class="contentBox" id="waterfall" onclick="sceneSelected(this.id)">
                 <a href="#video">
                     <img src="./src/waterfall/waterfall-thumbnail.png" alt="Rain Thumbnail">
                     <p>ZEN WATERFALL</p>
@@ -48,29 +50,30 @@
             </p>
         </div>
     </div>
-    <div id="innerPageBody">  
+    <div id="innerPageBody">
         <div id="videoWrap">
-            <video src="" loop="true" playsinline="" autobuffer="true" id="video" >
+            <video src="" loop="true" playsinline="" autobuffer="true" id="video">
                 Your Browser does not support the video tag.
             </video>
         </div>
-        <div class="innerTopBar">   
+        <div class="innerTopBar">
             <a href=""><img src="./src/pauseme_logo.png" alt="Logo"></a>
             <p><a href="">GO BACK</a></p>
-        </div>            
+        </div>
         <div id="breathGuideContainer" class="playVideoBtn" onclick="startBreatheGuide()">
             <div class="container">
-    
+
                 <div class="circle"></div>
-                
+
                 <p id="text">Click Here<br>to Start</p>
-    
+
                 <div class="pointer-container">
                     <div class="pointer"></div>
                 </div>
             </div>
         </div>
     </div>
-<script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
