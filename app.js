@@ -1,31 +1,31 @@
 // Content
 
-let content = {
-    beach: {
-        "name": "Beach Sunset",
-        "video--mobile": "./src/beach/beach-video-mobile.mp4",
-        "video--desktop": "./src/beach/beach-video-desktop.mp4",
-        "img--thumbnail": "./src/beach/beach-thumbnail.png"
-    },
-    rain: {
-        "name": "Cozy Rain",
-        "video--mobile": "./src/rain/rain-video-mobile.mp4",
-        "video--desktop": "./src/rain/rain-video-desktop.mp4",
-        "img--thumbnail": "./src/rain/rain-thumbnail.png"
-    },
-    birds: {
-        "name": "Birds Energy",
-        "video--mobile": "./src/birds/birds-video-mobile.mp4",
-        "video--desktop": "./src/birds/birds-video-desktop.mp4",
-        "img--thumbnail": "./src/birds/birds-thumbnail.png"
-    },
-    waterfall: {
-        "name": "Zen Waterfall",
-        "video--mobile": "./src/waterfall/waterfall-video-mobile.mp4",
-        "video--desktop": "./src/waterfall/waterfall-video-desktop.mp4",
-        "img--thumbnail": "./src/waterfall/waterfall-thumbnail.png"
-    }
-}
+// let content = {
+//     beach: {
+//         "name": "Beach Sunset",
+//         "video--mobile": "./src/beach/beach-video-mobile.mp4",
+//         "video--desktop": "./src/beach/beach-video-desktop.mp4",
+//         "img--thumbnail": "./src/beach/beach-thumbnail.png"
+//     },
+//     rain: {
+//         "name": "Cozy Rain",
+//         "video--mobile": "./src/rain/rain-video-mobile.mp4",
+//         "video--desktop": "./src/rain/rain-video-desktop.mp4",
+//         "img--thumbnail": "./src/rain/rain-thumbnail.png"
+//     },
+//     birds: {
+//         "name": "Birds Energy",
+//         "video--mobile": "./src/birds/birds-video-mobile.mp4",
+//         "video--desktop": "./src/birds/birds-video-desktop.mp4",
+//         "img--thumbnail": "./src/birds/birds-thumbnail.png"
+//     },
+//     waterfall: {
+//         "name": "Zen Waterfall",
+//         "video--mobile": "./src/waterfall/waterfall-video-mobile.mp4",
+//         "video--desktop": "./src/waterfall/waterfall-video-desktop.mp4",
+//         "img--thumbnail": "./src/waterfall/waterfall-thumbnail.png"
+//     }
+// }
 
 
 // Breath Guide
@@ -78,7 +78,7 @@ function showInnerPage() {
 
 const video = document.getElementById('video');
 const playBtn = document.querySelector('.playVideoBtn');
-const videoSrc = document.getElementById('video');
+let videoSrc = document.getElementById('video');
 
 playBtn.addEventListener("click", function () {
     video.play();
@@ -86,15 +86,30 @@ playBtn.addEventListener("click", function () {
 
 //Selecting the scene and fetchin it from the database
 
-//THIRD VERSION (using Fetch API) - last version, shorted and way more effective and ux friendly. 
+//THIRD VERSION  - last version, shorted and way more effective for this simple vanilla version.
+// On the next fase (PauseMe on ReactApp) we will use Fetch API, using NodeJs to manage all files.
 
 function sceneSelected(id) {
-    fetch("./data.json")
-        .then(response => response.json())
-        .then(data => console.log(data, id))
-        .then(showInnerPage())
-        .then(videoSrc.src = './src/' + id + '/' + id + '-video-desktop.mp4')
+    showInnerPage();
+    videoSrc.src = './src/' + id + '/video-desktop.mp4';
 }
+
+
+
+
+
+
+
+
+
+
+//FORTH VERSION (PauseMe on ReactApp)
+
+// fetch('./data.json')
+//     // .then(response => response.json())
+//     // .then(data => console.log(data, id))
+//     .then(showInnerPage())
+//     .then(videoSrc.src = `data.${id}.video--desktop`)
 
 
 //SECOND VERSION (using XMLHttpRequest) - had to use double click, so it wasn't practicle and ux friendly.
